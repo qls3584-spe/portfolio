@@ -1,14 +1,1308 @@
-body {
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 100px;
+/* ========================= 
+   BASIC 
+========================= */ 
+
+* { 
+    box-sizing: border-box; 
+} 
+
+html { 
+    scroll-behavior: smooth; 
+} 
+
+body { 
+    margin: 0; 
+    background: #f7f8fa; 
+    color: #171717; 
+    font-family: Arial, Helvetica, sans-serif; 
+} 
+
+a { 
+    color: inherit; 
+    text-decoration: none; 
 }
 
-h1 {
-    font-size: 48px;
+
+/* ========================= 
+   HEADER 
+========================= */ 
+
+.site-header { 
+    width: min(1100px, calc(100% - 60px)); 
+    margin: 0 auto; 
+
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+
+    padding: 30px 0; 
+
+    font-size: 14px; 
+} 
+
+.logo { 
+    font-weight: 600; 
+} 
+
+.site-header nav { 
+    display: flex; 
+    gap: 28px; 
+} 
+
+.site-header nav a { 
+    color: #666; 
+    transition: color 0.2s; 
+} 
+
+.site-header nav a:hover, 
+.site-header nav a.active { 
+    color: #171717; 
 }
 
-p {
-    font-size: 20px;
+
+/* ========================= 
+   HERO 
+========================= */ 
+
+.hero { 
+    width: min(1100px, calc(100% - 60px)); 
+    margin: 0 auto; 
+
+    padding: 65px 0 55px; 
+
+    text-align: left; 
+} 
+
+.hero-content { 
+    width: 100%; 
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 200px; 
+
+    gap: 70px; 
+    align-items: start; 
+} 
+
+.hero-text { 
+    min-width: 0; 
+} 
+
+.hero h1 { 
+    margin: 0 0 20px; 
+
+    font-size: clamp(46px, 5vw, 66px); 
+    line-height: 1; 
+    letter-spacing: -2px; 
+
+    font-weight: 700; 
+} 
+
+.hero-position { 
+    margin: 0; 
+
+    font-size: 20px; 
+    font-weight: 500; 
+} 
+
+.hero-affiliation { 
+    margin: 8px 0 0; 
+
+    font-size: 16px; 
+    color: #666; 
+} 
+
+.hero-lab { 
+    margin: 8px 0 0; 
+} 
+
+.hero-lab a { 
+    font-size: 15px; 
+    font-weight: 600; 
+    color: #5273a5; 
+} 
+
+.hero-lab a:hover { 
+    text-decoration: underline; 
+} 
+
+.hero-intro { 
+    max-width: 720px; 
+
+    margin: 40px 0 0; 
+
+    font-size: 20px; 
+    line-height: 1.6; 
+
+    color: #444; 
+} 
+
+.hero-links { 
+    display: flex; 
+    gap: 24px; 
+
+    margin-top: 26px; 
+
+    font-size: 15px; 
+    font-weight: 600; 
+} 
+
+.hero-links a { 
+    border-bottom: 1px solid #999; 
+    padding-bottom: 3px; 
+} 
+
+.hero-links a:hover { 
+    border-color: #171717; 
+}
+
+
+/* ========================= 
+   HERO PHOTO 
+========================= */ 
+
+.hero-photo { 
+    display: flex; 
+    justify-content: flex-end; 
+
+    padding-top: 60px; 
+} 
+
+.hero-photo img { 
+    width: 200px; 
+    height: 240px; 
+
+    object-fit: cover; 
+    object-position: center top; 
+
+    border-radius: 10px; 
+
+    display: block; 
+}
+
+
+/* ========================= 
+   GENERAL SECTION 
+========================= */ 
+
+.section { 
+    width: min(1100px, calc(100% - 60px)); 
+    margin: 0 auto; 
+
+    padding: 60px 0; 
+
+    border-top: 1px solid #ddd; 
+} 
+
+.section-label { 
+    margin: 0 0 30px; 
+
+    font-size: 15px; 
+    font-weight: 700; 
+    letter-spacing: 4px; 
+
+    color: #5273a5; 
+}
+
+
+/* ========================= 
+   RESEARCH AREAS 
+========================= */ 
+
+.research-area-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+
+    gap: 60px; 
+} 
+
+.research-area { 
+    border-top: 1px solid #222; 
+    padding-top: 15px;
+
+    display: grid;
+    grid-template-rows: auto auto 96px 96px;
+} 
+
+.area-number { 
+    display: block; 
+
+    margin-bottom: 24px; 
+
+    font-size: 13px; 
+    color: #888; 
+} 
+
+.research-area h2 { 
+    margin: 0 0 34px; 
+
+    font-size: 28px; 
+    font-weight: 600; 
+    letter-spacing: -0.5px; 
+} 
+
+.area-project { 
+    margin: 0;
+    min-height: 96px;
+}
+
+.area-project + .area-project {
+    margin-top: 0;
+}
+
+.project-link { 
+    display: inline-block; 
+
+    margin-bottom: 10px; 
+
+    font-size: 18px; 
+    font-weight: 600; 
+
+    border-bottom: 1px solid transparent; 
+
+    transition: border-color 0.2s; 
+} 
+
+.project-link:hover { 
+    border-color: #171717; 
+} 
+
+.area-project p { 
+    margin: 0; 
+
+    max-width: none; 
+
+    font-size: 15px; 
+    line-height: 1.7; 
+
+    color: #666; 
+}
+
+
+/* ========================= 
+   EXPERIENCE 
+========================= */ 
+
+.experience-list { 
+    width: 100%; 
+    max-width: 1000px; 
+} 
+
+.experience-item { 
+    padding: 0 0 24px; 
+    margin-bottom: 24px; 
+
+    border-bottom: 1px solid #ddd; 
+} 
+
+.experience-item:last-child { 
+    margin-bottom: 0; 
+} 
+
+.experience-date { 
+    display: block; 
+
+    margin-bottom: 10px; 
+
+    font-size: 13px; 
+    font-weight: 600; 
+    letter-spacing: 0.4px; 
+
+    color: #5273a5; 
+} 
+
+.experience-item h3 { 
+    margin: 0 0 8px; 
+
+    font-size: 22px; 
+    font-weight: 500; 
+    line-height: 1.4; 
+} 
+
+.experience-place { 
+    margin: 0; 
+
+    font-size: 15px; 
+    line-height: 1.6; 
+
+    color: #555; 
+} 
+
+.experience-description { 
+    margin: 7px 0 0; 
+
+    font-size: 15px; 
+    line-height: 1.6; 
+
+    color: #666; 
+}
+
+
+/* ========================= 
+   PROJECTS 
+========================= */ 
+
+.project-list { 
+    width: 100%;
+    max-width: 1000px;
+} 
+
+.project-item { 
+    display: grid; 
+    grid-template-columns: 65px minmax(0, 1fr); 
+    gap: 5px; 
+
+    /* Experience와 동일한 항목 간격 */
+    padding: 0 0 24px; 
+    margin-bottom: 24px; 
+
+    /* Experience와 동일하게 아래쪽에 선 */
+    border-bottom: 1px solid #ddd; 
+} 
+
+.project-item:last-child { 
+    margin-bottom: 0; 
+}
+
+
+/* PROJECT NUMBER */ 
+
+.project-number { 
+    padding-top: 1px; 
+
+    font-size: 16px; 
+    font-weight: 600; 
+    line-height: 1.4; 
+    letter-spacing: 0.5px; 
+
+    color: #5273a5; 
+}
+
+
+/* PROJECT TITLE */ 
+
+.project-content h3 { 
+    margin: 0 0 9px; 
+
+    font-size: 19px; 
+    font-weight: 600; 
+    line-height: 1.4; 
+
+    color: #171717; 
+}
+
+
+/* FUNDING / PERIOD / ROLE */ 
+
+.project-meta { 
+    margin: 0 0 14px; 
+
+    font-size: 14px; 
+    line-height: 1.5; 
+
+    color: #777; 
+}
+
+
+/* DESCRIPTION */ 
+
+.project-description { 
+    margin: 0; 
+
+    font-size: 15px; 
+    line-height: 1.75; 
+
+    color: #444; 
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+    width: min(1100px, calc(100% - 60px));
+    margin: 0 auto;
+
+    padding: 30px 0 35px;
+
+    border-top: 1px solid #ddd;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 13px;
+    color: #888;
+}
+
+.footer-updated {
+    font-size: 13px;
+    color: #888;
+}
+
+.update-mark {
+    color: #5273a5;
+    font-weight: 700;
+}
+
+
+/* ========================= 
+   MOBILE 
+========================= */ 
+
+@media (max-width: 700px) { 
+
+    .site-header { 
+        width: calc(100% - 36px); 
+        padding: 24px 0; 
+    } 
+
+    .site-header nav { 
+        gap: 14px; 
+        font-size: 12px; 
+    } 
+
+
+    /* HERO */ 
+
+    .hero, 
+    .section, 
+    .site-footer { 
+        width: calc(100% - 36px); 
+    } 
+
+    .hero { 
+        padding: 50px 0 60px; 
+    } 
+
+    .hero-content { 
+        grid-template-columns: 1fr; 
+        gap: 30px; 
+    } 
+
+    .hero-photo { 
+        justify-content: flex-start; 
+        padding-top: 0; 
+        grid-row: 1; 
+    } 
+
+    .hero-photo img { 
+        width: 135px; 
+        height: 162px; 
+    } 
+
+    .hero h1 { 
+        font-size: 46px; 
+        letter-spacing: -2px; 
+    } 
+
+    .hero-position { 
+        font-size: 18px; 
+    } 
+
+    .hero-intro { 
+        font-size: 18px; 
+    } 
+
+
+    /* SECTION */ 
+
+    .section { 
+        padding: 50px 0; 
+    } 
+
+    .section-label { 
+        margin-bottom: 35px; 
+    } 
+
+
+    /* RESEARCH AREAS */ 
+
+    .research-area-grid { 
+        grid-template-columns: 1fr; 
+        gap: 55px; 
+    } 
+
+
+    /* EXPERIENCE */ 
+
+    .experience-item h3 { 
+        font-size: 20px; 
+    } 
+
+
+    /* PROJECTS */ 
+
+    .project-item { 
+        grid-template-columns: 30px minmax(0, 1fr); 
+        gap: 5px; 
+
+        /* 모바일에서도 Experience와 동일 */
+        padding: 0 0 24px; 
+        margin-bottom: 24px; 
+    } 
+
+    .project-number { 
+        font-size: 14px; 
+    } 
+
+    .project-content h3 { 
+        font-size: 15px; 
+    } 
+
+    .project-meta { 
+        font-size: 13px; 
+    } 
+
+    .project-description { 
+        font-size: 14px; 
+    } 
+}
+/* =========================================================
+   RESEARCH PAGE
+========================================================= */
+
+
+/* =========================
+   RESEARCH HERO
+========================= */
+
+.research-hero {
+    width: min(1100px, calc(100% - 60px));
+    margin: 0 auto;
+
+    padding: 75px 0 65px;
+}
+
+.research-hero .section-label {
+    margin-bottom: 24px;
+}
+
+.research-hero h1 {
+    margin: 0 0 22px;
+
+    font-size: clamp(42px, 5vw, 60px);
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    font-weight: 700;
+}
+
+.research-hero > p:last-child {
+    max-width: 780px;
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.65;
+
+    color: #555;
+}
+
+
+/* =========================
+   RESEARCH CATEGORY
+========================= */
+
+.research-category {
+    width: min(1100px, calc(100% - 60px));
+    margin: 0 auto;
+
+    padding: 55px 0 45px;
+
+    border-top: 1px solid #ddd;
+}
+
+.research-category .section-label {
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   INDIVIDUAL RESEARCH
+========================= */
+
+.research-project {
+    display: grid;
+    grid-template-columns: 65px minmax(0, 1fr);
+    gap: 5px;
+
+    padding: 35px 0;
+
+    border-top: 1px solid #ddd;
+
+    scroll-margin-top: 40px;
+}
+
+.research-project:last-child {
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* NUMBER */
+
+.research-project-number {
+    padding-top: 4px;
+
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    color: #5273a5;
+}
+
+
+/* CONTENT */
+
+.research-project-content {
+    min-width: 0;
+}
+
+.research-project-content h2 {
+    margin: 0 0 12px;
+
+    font-size: 28px;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    font-weight: 600;
+}
+
+
+/* KEYWORDS */
+
+.research-project-keywords {
+    margin: 0 0 24px;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: #666;
+}
+
+
+/* DESCRIPTION */
+
+.research-project-description {
+    max-width: 850px;
+
+    margin: 0;
+
+    font-size: 17px;
+    line-height: 1.75;
+
+    color: #444;
+}
+
+
+/* =========================
+   RESEARCH TAGS
+========================= */
+
+.research-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-top: 24px;
+}
+
+.research-tags span {
+    display: inline-block;
+
+    padding: 6px 11px;
+
+    border: 1px solid #d5d9df;
+    border-radius: 20px;
+
+    font-size: 12px;
+    color: #666;
+}
+
+
+/* =========================
+   RESEARCH PAGE MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .research-hero,
+    .research-category {
+        width: calc(100% - 36px);
+    }
+
+    .research-hero {
+        padding: 50px 0;
+    }
+
+    .research-hero h1 {
+        font-size: 42px;
+    }
+
+    .research-hero > p:last-child {
+        font-size: 17px;
+    }
+
+    .research-category {
+        padding: 45px 0 35px;
+    }
+
+    .research-project {
+        grid-template-columns: 35px minmax(0, 1fr);
+        gap: 5px;
+
+        padding: 28px 0;
+    }
+
+    .research-project-number {
+        font-size: 13px;
+    }
+
+    .research-project-content h2 {
+        font-size: 23px;
+    }
+
+    .research-project-description {
+        font-size: 15px;
+    }
+}.pdf-link {
+    display: inline-block;
+    margin-top: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #5273a5;
+
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.pdf-link:hover {
+    border-color: #5273a5;
+}
+/* =========================================================
+   RESEARCH PROJECT IMAGE LAYOUT
+========================================================= */
+
+/* 각 연구 항목: 왼쪽 설명 + 오른쪽 이미지 */
+.research-project {
+    grid-template-columns: 65px minmax(0, 1fr) 380px;
+    gap: 20px;
+    align-items: start;
+}
+
+
+/* 연구 이미지 영역 */
+.research-detail-image {
+    width: 100%;
+    max-width: 380px;
+    justify-self: end;
+    align-self: start;
+}
+
+
+/* 연구 이미지 */
+.research-detail-image img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: contain;
+    object-position: top center;
+
+    display: block;
+}
+
+
+
+/* 첫 번째 COG/NH3 항목 */
+.research-detail-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 40px;
+    align-items: start;
+
+    width: 100%;
+}
+
+.research-detail-text {
+    display: grid;
+    grid-template-columns: 50px minmax(0, 1fr);
+    gap: 15px;
+}
+
+.research-detail-content {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .research-project {
+        grid-template-columns: 35px minmax(0, 1fr);
+    }
+
+    .research-detail-item {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .research-detail-text {
+        grid-template-columns: 35px minmax(0, 1fr);
+        gap: 5px;
+    }
+
+    .research-detail-image {
+        grid-column: 1 / -1;
+
+        width: 100%;
+        max-width: 100%;
+
+        justify-self: stretch;
+    }
+
+    .research-detail-image img {
+        width: 100%;
+        height: auto;
+        max-height: 280px;
+    }
+}
+/* =========================================================
+   CV PAGE
+========================================================= */
+
+
+/* =========================
+   CV HERO
+========================= */
+
+.cv-hero {
+    width: min(1100px, calc(100% - 60px));
+    margin: 0 auto;
+
+    padding: 75px 0 45px;
+}
+
+.cv-hero .section-label {
+    margin-bottom: 24px;
+}
+
+.cv-hero h1 {
+    margin: 0 0 22px;
+
+    font-size: clamp(48px, 5vw, 64px);
+    line-height: 1;
+    letter-spacing: -1.5px;
+    font-weight: 700;
+}
+
+.cv-intro {
+    max-width: 760px;
+
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.65;
+
+    color: #555;
+}
+
+
+
+/* =========================
+   CV SECTION
+========================= */
+
+.cv-section {
+    width: min(1100px, calc(100% - 60px));
+    margin: 0 auto;
+
+    padding: 55px 0;
+
+    border-top: 1px solid #ddd;
+
+    scroll-margin-top: 40px;
+}
+
+.cv-section-heading {
+    display: grid;
+    grid-template-columns: 55px minmax(0, 1fr);
+
+    margin-bottom: 38px;
+}
+
+.cv-section-number {
+    padding-top: 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #5273a5;
+}
+
+.cv-section-heading h2 {
+    margin: 0;
+
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+
+/* =========================
+   CV ITEM
+========================= */
+
+.cv-list {
+    width: 100%;
+}
+
+.cv-item {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 35px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.cv-date {
+    padding-top: 3px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #5273a5;
+}
+
+.cv-content h3 {
+    margin: 0 0 8px;
+
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.cv-position {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: #444;
+}
+
+.cv-description {
+    margin: 5px 0 0;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: #777;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .cv-hero,
+    .cv-navigation,
+    .cv-section {
+        width: calc(100% - 36px);
+    }
+
+    .cv-hero {
+        padding: 50px 0 35px;
+    }
+
+    .cv-navigation {
+        grid-template-columns: 1fr;
+        padding-bottom: 45px;
+    }
+
+    .cv-section-heading {
+        grid-template-columns: 40px minmax(0, 1fr);
+    }
+
+    .cv-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+}
+/* =========================================================
+   CV LAYOUT
+========================================================= */
+
+.cv-hero {
+    width: min(1100px, calc(100% - 60px));
+    margin: 0 auto;
+
+    padding: 45px 0 40px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.cv-hero .section-label {
+    margin-bottom: 10px;
+    font-size: 12px;
+    letter-spacing: 0;
+}
+
+.cv-hero h1 {
+    margin: 0 0 15px;
+
+    font-size: 38px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.cv-intro {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: #444;
+}
+
+
+/* 전체 CV 본문 */
+
+.cv-layout {
+    width: min(1100px, calc(100% - 60px));
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 45px;
+
+    padding: 40px 0 60px;
+}
+
+
+/* LEFT SIDEBAR */
+
+.cv-sidebar {
+    border-left: 1px solid #ddd;
+    padding-left: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    align-self: start;
+
+    position: sticky;
+    top: 30px;
+}
+
+.cv-sidebar a {
+    font-size: 13px;
+    color: #666;
+}
+
+.cv-sidebar a:hover,
+.cv-sidebar a.active {
+    color: #5273a5;
+}
+
+
+/* RIGHT */
+
+.cv-main {
+    min-width: 0;
+}
+
+
+/* SECTION */
+
+.cv-main .cv-section {
+    width: 100%;
+    margin: 0;
+
+    padding: 0 0 35px;
+
+    border-top: none;
+
+    scroll-margin-top: 40px;
+}
+
+.cv-main .cv-section + .cv-section {
+    padding-top: 30px;
+}
+
+
+/* SECTION TITLE */
+
+.cv-section-heading {
+    display: grid;
+    grid-template-columns: 45px minmax(0, 1fr);
+
+    margin-bottom: 5px;
+}
+
+.cv-section-number {
+    padding-top: 5px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #5273a5;
+}
+
+.cv-section-heading h2 {
+    margin: 0;
+
+    font-size: 27px;
+    font-weight: 600;
+}
+
+
+/* EACH ITEM */
+
+.cv-item {
+    display: grid;
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 30px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.cv-date {
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #777;
+}
+
+.cv-content h3 {
+    margin: 0 0 7px;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.cv-position {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: #666;
+}
+
+.cv-description {
+    margin: 4px 0 0;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: #777;
+}
+.cv-expected {
+    padding-left: 72px;
+    font-weight: 400;
+    color: #777;
+}
+.cv-research-description {
+    margin: 10px 0 0;
+    padding-left: 16px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #777;
+}
+
+.cv-research-description li {
+    margin-bottom: 3px;
+}
+.conference-type {
+    margin: 5px 0 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #5273a5;
+}
+.skills-list {
+    width: 100%;
+}
+
+.skill-item {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.skill-category {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #777;
+}
+
+.skill-content p {
+    margin: 0 0 7px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.skill-content p:last-child {
+    margin-bottom: 0;
+}
+
+.skill-content strong {
+    font-weight: 600;
+    color: #333;
+}
+/* =========================
+   CV DOWNLOAD BUTTON
+========================= */
+
+.cv-actions {
+    margin-top: 18px;
+}
+
+.cv-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 10px 18px;
+
+    background: #5273a5;
+    color: #fff;
+
+    border: 1px solid #5273a5;
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cv-download:hover {
+    background: #fff;
+    color: #5273a5;
+    transform: translateY(-1px);
+}
+
+.cv-download-icon {
+    font-size: 14px;
+    line-height: 1;
 }
