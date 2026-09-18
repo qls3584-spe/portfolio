@@ -1306,3 +1306,70 @@ a {
     font-size: 14px;
     line-height: 1;
 }
+/* =========================
+   CV - Mobile
+   ========================= */
+@media (max-width: 768px) {
+
+    .cv-hero {
+        width: calc(100% - 40px);
+        padding: 40px 0 45px;
+    }
+
+    .cv-layout {
+        width: calc(100% - 40px);
+        display: block;
+        padding: 35px 0 50px;
+    }
+
+    /* 왼쪽 CV 메뉴 숨김 */
+    .cv-sidebar {
+        display: none;
+    }
+
+    /* 섹션 제목 */
+    .cv-section-heading {
+        grid-template-columns: 38px minmax(0, 1fr);
+    }
+
+    .cv-section-heading h2 {
+        font-size: 24px;
+    }
+
+    /* 날짜 + 내용 → 모바일에서는 위아래 배치 */
+    .cv-item {
+        display: block;
+        padding: 20px 0;
+    }
+
+    .cv-date {
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    .cv-expected {
+        display: inline;
+        padding-left: 5px;
+    }
+
+    .cv-content {
+        width: 100%;
+    }
+
+    .cv-content h3 {
+        font-size: 16px;
+    }
+
+    .cv-position,
+    .cv-description,
+    .cv-research-description {
+        font-size: 14px;
+    }
+
+    /* Technical Skills */
+    .skill-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 18px 0;
+    }
+}
